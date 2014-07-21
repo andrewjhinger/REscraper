@@ -1,0 +1,93 @@
+﻿@using Microsoft.Ajax.Utilities
+@using REscraper.Models
+@model IEnumerable<REscraper.Models.REproperty>
+
+@{
+    ViewBag.Title = "Index";
+}
+<br/>
+@*
+    <div>
+        @using (Html.BeginForm("Index", "Property", FormMethod.Get))
+        {
+            <p>
+                <b>County: @Html.DropDownList("propertyCounty", "All")</b>
+                <b>Required Players: @Html.DropDownList("gameMinPlayers", "All")</b>
+                <b>Find by name: @Html.TextBox("searchString", ViewBag.CurrentFilter as string)</b>
+                <input type="submit" value="Filter" />
+            </p>
+
+        }
+    </div>*@
+
+@if (Model.Count() > 0)
+{
+    <div><b>Displaying @Model.Count() properties</b></div>
+}
+else
+{
+    <div><b>No properties returned</b></div>
+}
+<table class="table" style="border:1px solid cornsilk">
+    <tr style="border:1px solid cornsilk">
+        <th>
+            Property:
+        </th>
+        <th>
+            Case Information:
+        </th>
+        <th>
+            Price:
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+{
+    <tr style="border:1px solid cornsilk">
+        <td style="width: 200px">
+            @Html.DisplayFor(modelItem => item.PropertyAddress)<br />
+            @Html.DisplayFor(modelItem => item.County)<br />
+            <b>Parcel #: </b>@Html.DisplayFor(modelItem => item.ParcelNumber)<br />
+        </td>
+        <td style="width: 400px">
+            <b>Case #:</b>@Html.DisplayFor(modelItem => item.CaseNumber)<br />
+            <b>Plantiff:</b> @Html.DisplayFor(modelItem => item.Plaintiff)<br />
+            <b>Defendant:</b> @Html.DisplayFor(modelItem => item.Defendant)<br />
+            <b>Notes:</b> @Html.DisplayFor(modelItem => item.Notes)<br />
+            <b>Forclosure Type:</b> @Html.DisplayFor(modelItem => item.ForclosureType)<br />
+            <b>Plantiff Attorney:</b> @Html.DisplayFor(modelItem => item.PlantiffAtty)<br />
+            <b>Sale Date:</b> @Html.DisplayFor(modelItem => item.SaleDate)<br />
+
+        </td>
+        <td style="width: 250px">
+            <b>Appraised:</b> @Html.DisplayFor(modelItem => item.AppraisedValue)<br />
+            <b>Judgement:</b> @Html.DisplayFor(modelItem => item.JudgmentValue)<br />
+            <b>Opening Bid:</b> @Html.DisplayFor(modelItem => item.OpeningBid)<br />
+            <b>Deposit:</b> @Html.DisplayFor(modelItem => item.Deposit)<br />
+            
+            <b>Zestimate Range:</b> @Html.DisplayFor(modelItem => item.ZestimateLow) - @Html.DisplayFor(modelItem => item.ZestimateHigh) <br />
+            
+            
+            
+        </td>
+        <td>
+            @if (item.ChartUrl != null)
+            {
+            <img src="@Url.Content(item.ChartUrl)" alt="Image" />
+            }
+        </td>
+
+        <td style="width: 250px">
+            @if (item.LinktoMap != null)
+            { <a href="@Url.Content(item.LinktoMap)"><b>Link to Map |</b> <br /> </a> }
+            @if (item.LinktoComparables != null)
+            { <a href="@Url.Content(item.LinktoComparables)"><b>Link to Comparables |</b> <br /></a>}
+            @if (item.LinktoGraphsAndData != null)
+            { <a href="@Url.Content(item.LinktoGraphsAndData)"><b>Link to Graphs And Data  |</b> <br /></a>}
+            @if (item.LinktoHomeDetails != null)
+            { <a href="@Url.Content(item.LinktoHomeDetails)"><b>Link to Home Details </b></a>}
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,242 @@
+﻿@model REscraper.Models.REproperty
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>REproperty</h4>
+	<hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.CaseNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CaseNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PropertyAddress)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PropertyAddress)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.City)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.City)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.County)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.County)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Zip)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Zip)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Plaintiff)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Plaintiff)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Defendant)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Defendant)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Notes)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Notes)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ForclosureType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ForclosureType)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ParcelNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ParcelNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PlantiffAtty)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PlantiffAtty)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AppraisedValue)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AppraisedValue)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.JudgmentValue)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.JudgmentValue)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OpeningBid)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OpeningBid)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Deposit)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Deposit)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SaleDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SaleDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Latitude)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Latitude)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Longitude)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Longitude)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ZestimateHigh)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ZestimateHigh)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ZestimateLow)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ZestimateLow)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ZillowId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ZillowId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LinktoMap)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LinktoMap)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LinktoHomeDetails)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LinktoHomeDetails)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LinktoGraphsAndData)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LinktoGraphsAndData)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LinktoComparables)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LinktoComparables)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Estimate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Estimate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ValueChange)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ValueChange)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ValueChangeDurationInDays)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ValueChangeDurationInDays)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>flexigrid</id>
+    <version>1.1.0</version>
+    <title>Flexigrid for jQuery</title>
+    <authors>Paulo P. Mariñas</authors>
+    <owners>Paulo P. Mariñas</owners>
+    <licenseUrl>http://opensource.org/licenses/mit-license.php</licenseUrl>
+    <projectUrl>http://www.flexigrid.info/</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Lightweight but rich data grid with resizable columns and a scrolling data to match the headers, plus an ability to connect to an xml based data source using Ajax to load the content.
+
+Similar in concept with the Ext Grid only its pure jQuery love, which makes it light weight and follows the jQuery mantra of running with the least amount of configuration.</description>
+    <tags>jQuery data grid</tags>
+    <dependencies>
+      <dependency id="jQuery" version="1.8.3" />
+    </dependencies>
+  </metadata>
+</package>
